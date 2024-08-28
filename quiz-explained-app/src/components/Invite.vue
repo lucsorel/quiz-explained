@@ -9,7 +9,7 @@ const qrCodeLink = ref(`${location.protocol}//${location.host}/quiz/${route.para
 </script>
 
 <template>
-    <qrcode-vue :value="qrCodeLink" />
+    <qrcode-vue :value="qrCodeLink" :size="300" />
     <p>
         {{ qrCodeLink }}
     </p>
