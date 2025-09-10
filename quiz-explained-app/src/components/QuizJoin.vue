@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const player = ref('')
+const playerName = ref('')
 const joining = ref(false)
 
 function onJoinQuiz() {
@@ -13,10 +13,10 @@ function onJoinQuiz() {
 <template>
     <form @submit.prevent="onJoinQuiz" class="pure-form">
         <fieldset>
-            <legend>Rejoindre le quiz en tant que : {{ player }}</legend>
-            <input v-model.trim="player" type="name" placeholder="Votre nom (5+ caractères)" />
+            <legend>Rejoindre le quiz en tant que : {{ playerName }}</legend>
+            <input v-model.trim="playerName" type="name" placeholder="Votre nom (5+ caractères)" />
         </fieldset>
-        <button :disabled="joining || player.length < 5" type="submit" class="pure-button pure-button-primary">Rejoindre</button>
+        <button :disabled="joining || playerName.length < 5" type="submit" class="pure-button pure-button-primary">Rejoindre</button>
     </form>
 </template>
 

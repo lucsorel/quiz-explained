@@ -5,7 +5,7 @@ import QrcodeVue from 'qrcode.vue'
 
 const route = useRoute()
 
-const qrCodeLink = ref(`${location.protocol}//${location.host}/quiz/${route.params.id}`)
+const qrCodeLink = ref(`${location.protocol}//${location.host}/quiz/${route.params.quizId}`)
 </script>
 
 <template>
